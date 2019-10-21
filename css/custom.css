@@ -1,0 +1,447 @@
+/*
+ * Base structure
+ */
+
+ html,
+ body {
+   height: 100%;
+   font-family: 'Catamaran', sans-serif;
+   background: white;
+   margin: 0px 0PX 0px 0px;
+ }
+ 
+ body {
+   color:black;
+   text-align: left;
+ }
+
+
+ .section {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+/*
+ * Globals
+ */
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  padding-top:40px;
+  line-height: 120px;
+}
+
+.hero {
+  font-size:60px;
+  line-height: 60px;
+}
+
+.scroll{
+  font-size: 20px;
+  padding-top: 20px;
+}
+.navbar-brand {
+  margin-left: 8px;
+}
+.navbar{
+  padding:30px;
+}
+.nav-bar-white {
+  background-color: white;
+}
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  padding-top:40px;
+  padding-bottom: 10px;
+  line-height: 40px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.block-quote{
+  font-size: 20px;
+  font-weight: 700; 
+}
+p {
+  font-weight: 300;
+  font-size: 18px;
+}
+.padding-top-hero {
+  padding-top:50px;
+  padding-bottom: 100px; 
+}
+.margin-top-20 {
+  margin-top:20px; 
+
+}
+.padding-top-bottom {
+  padding-top:100px; 
+  padding-bottom: 70px;
+}
+.padding-bottom {
+  padding-bottom: 70px;
+}
+.padding-top {
+  padding-top: 20px;
+}
+.profile_box {
+  width: 100%;
+  height: auto;
+  background-color:#F8F8F8;
+}
+.profile_image {
+  width: 100%;
+  height: auto;
+}
+.profile-padding {
+  padding:20px;
+  margin-bottom:20px;
+}
+blockquote {
+  font-style: italic;
+}
+
+.icon-size{
+  font-size: 30px;
+  color: black;
+  margin: 0px;
+  padding:0px;
+}
+.icon-size-white{
+  font-size: 30px;
+  color: white;
+  margin: 0px;
+  padding:0px;
+}
+
+.hero-image{
+  background-image: url(../images/hero_triangles.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: #F8E71C;
+}
+.section-image {
+  background-image: url(../images/hero_triangles_white.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: black; 
+}
+.section-black {
+  background-color: black;
+  color: white;
+}
+.font-white {
+  color: white;
+  z-index: 100;
+}
+
+.yellow-block:before {
+  content: " ";
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #F8E71C;
+  height: 30px;
+  width: 10px;
+}
+
+.padding-hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  h1 {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  h2{
+    padding-top:0px;
+  }
+  .hero {
+    font-size:80px;
+    line-height: 80px;
+  }
+  .padding-hero {
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  h1 {
+    font-weight: 700;
+    font-size: 64px;
+  }
+  h2{
+    padding-top:0px;
+  }
+  .hero {
+    font-size:80px;
+  }
+  .padding-hero {
+    padding-top: 200px;
+    padding-bottom: 300px;
+  }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {
+    font-weight: 700;
+    font-size: 84px;
+  }
+  h2{
+    padding-top:0px;
+  }
+  .hero {
+    font-size:100px;
+    line-height: 100px;
+  }
+  .padding-hero {
+    padding-top: 200px;
+    padding-bottom: 300px;
+  }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  h1 {
+    font-weight: 700;
+    font-size: 84px;
+  }
+  h2{
+    padding-top:0px;
+  }
+  .hero {
+    font-size:100px;
+    line-height: 100px;
+  }
+  .padding-hero {
+    padding-top: 200px;
+    padding-bottom: 300px;
+  }
+ }
+
+ .hero-tag{
+  padding-top: 40px;
+  font-size: 20px;
+ }
+
+ .text_center {
+   text-align: center;
+ }
+
+ .title:after {
+  content: "";
+  background: #F8E71C;
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: -1;
+ }
+
+ .nav_colour {
+  color: black;
+  background-color:#F8E71C;
+  text-decoration: none;
+}
+
+
+
+/* Links */
+
+
+.btn-lg{
+  text-transform: uppercase;
+  background-color:black;
+  border:0px;
+  padding: 12px 40px 10px 40px;
+  border-radius: 50px;
+}
+.btn-lg:hover {
+  color: black;
+  background-color:#F8E71C;
+  text-decoration: none;
+}
+.background-hero {
+  background-image: url(//images/announcement-banner_beta-business.png);
+  background-position: 100% 0;
+  background-color: white;
+}
+
+.corners{
+  font-size: 20px;
+}
+
+.expand-link {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.expand-link a:link {
+  color: black;
+  text-decoration-line: none; 
+}
+.expand-link a:active {
+  color: black;
+  text-decoration-line: none; 
+}
+
+.expand-link a:hover {
+  text-decoration-line: underline;
+}
+
+.expand-link a:visited {
+  text-decoration-line: none;
+}
+
+
+.reverse{
+  transform: rotateZ(-180deg);
+  transition-duration:0.5s;
+  transition-timing-function: ease-in-out;
+  transform: rotateZ(-180deg);
+  -webkit-transition-duration:0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+
+
+
+.light_grey {
+  background-color: #F8F8F8;
+}
+.white {
+  background-color: white;
+}
+
+
+
+.section_header{
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+
+
+li.disc {
+  list-style: disc; 
+  padding-top: 20px;
+  line-height: 40px;
+}
+li.disc-none {
+  list-style-type: none; 
+  padding-top: 20px;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.list-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top:40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+.list-heading-small {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+
+ul {
+  font-weight: 700;
+  font-size: 32px;
+  margin-block-start: 0em;
+  padding-inline-start: 1em;
+}
+
+
+.my-bloke-quote {
+  font-size: 20px;
+  margin-block-end: 1px;
+  margin-inline-start: 15px;
+  margin-inline-end: 40px;
+}
+
+
+/***************
+ * Footer
+ ***************/
+ 
+
+.section-black a:link {
+  color: #F8E71C;
+  padding:5px;
+}
+.section-black a:hover {
+  color: black;
+  background: #F8E71C;
+  padding:5px;
+}
+.section-black a:active {
+  color: black;
+  background: #F8E71C;
+  padding:5px;
+}
+
+.light_grey a:link {
+  color: white;
+}
+.light_grey a:hover {
+  color: white;
+}
+.light_grey a:active {
+  color: white;
+}
+
+
+/***************
+ * Animation
+ ***************/
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 0.5s;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 0.5s;
+  animation:fadeIn ease-in 0.5s;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.5s;
+  -moz-animation-duration:0.5s;
+  animation-duration:0.5s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay:0.5s;
+  animation-delay: 0.5s;
+}
+
