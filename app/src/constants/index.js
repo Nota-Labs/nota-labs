@@ -23,9 +23,9 @@ export const ActionTypes = keyMirror({
   GITHUB_GET_REPOS_FAILURE: undefined,
   SHOW_ALERT: undefined,
   HIDE_ALERT: undefined,
-  ADD_ANSWER: undefined,
-  REMOVE_ANSWER: undefined,
-  REMOVE_LATEST_ANSWER: undefined,
+  QUIZ_ADD_ANSWER: undefined,
+  QUIZ_REMOVE_ANSWER: undefined,
+  QUIZ_REMOVE_LATEST_ANSWER: undefined,
 });
 
 /**

@@ -27,7 +27,7 @@ const Quiz = () => (
           <li>Quality control of design assets</li>
         </ul>
       </Box>
-      <Questions/>
+      <Questions />
     </Container>
   </Screen>
 );

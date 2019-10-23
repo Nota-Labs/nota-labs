@@ -1,10 +1,9 @@
-import { parseError } from 'modules/client';
 import { handleActions } from 'modules/helpers';
 
 import { ActionTypes } from 'constants/index';
 
 export const quizState = {
-  count: 0,
+  currentStep: 0,
   answers: [],
   questions: [
     {
@@ -106,21 +105,18 @@ export const quizState = {
 };
 
 export default {
-  app: handleActions(
+  quiz: handleActions(
     {
-      [REHYDRATE]: state => {
-        state.answers = [];
-      },
-      [ActionTypes.REMOVE_LATEST_ANSWER]: state => {
+      [ActionTypes.QUIZ_REMOVE_LATEST_ANSWER]: state => {
         state.answers = state.answers.splice(-1,1);
       },
-      [ActionTypes.REMOVE_ANSWER]: (state, { payload: { id } }) => {
+      [ActionTypes.QUIZ_REMOVE_ANSWER]: (state, { payload: { id } }) => {
         state.answers = state.answers.filter(d => d.id !== id);
       },
-      [ActionTypes.ADD_ANSWER]: (state, { payload }) => {
-        state.answers.push(payload);
+      [ActionTypes.QUIZ_ADD_ANSWER]: (state, { payload }) => {
+        state.answers.push(payload.answer);
       },
     },
-    appState,
+    quizState,
   ),
 };
