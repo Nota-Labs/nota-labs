@@ -28,6 +28,13 @@ exports[`App should render properly for anonymous users 1`] = `
                         to="/"
           >
           </RoutePrivate>
+          <RoutePrivate isauthenticated="{false}"
+                        path="/quiz"
+                        component="{[Function:"
+                        quiz]}
+                        to="/"
+          >
+          </RoutePrivate>
           <Route component="{[Function:"
                  notfound]}
           >

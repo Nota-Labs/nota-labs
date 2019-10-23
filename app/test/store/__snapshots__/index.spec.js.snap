@@ -16,6 +16,7 @@ Object {
   "app": Object {
     "alerts": Array [],
   },
+  "form": Object {},
   "github": Object {
     "repos": Object {
       "data": Object {},
@@ -23,6 +24,107 @@ Object {
       "query": "",
       "status": "idle",
     },
+  },
+  "quiz": Object {
+    "answers": Array [],
+    "currentStep": 0,
+    "questions": Array [
+      Object {
+        "answers": Array [
+          Object {
+            "label": "The product is mostly based on stakeholder requirements, with little or no direct user research behind it.",
+            "title": "No",
+          },
+          Object {
+            "label": "We'll do a little users-needs research before designing, and may create artefacts like personas to inform the product design.",
+            "title": "Somewhat",
+          },
+          Object {
+            "label": "Not only do we have a clear detailed map of users needs based on research, we also know which needs are 'hygiene', which are 'delighters', which are met and unmet by other services. The product roadmap is heavily based on this.",
+            "title": "Yes",
+          },
+        ],
+        "id": 1,
+        "question": "Can you easily demonstrate where your product serves real users needs, identified through research?",
+        "step": 1,
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "label": "We'll jump straight into design. If we conduct user research, it is only to capture usability issues.",
+            "title": "No",
+          },
+          Object {
+            "label": "Alongside up-front user-needs research, we try to employ UX best practices such as cognitive psychology, and behavioural psychology.",
+            "title": "Somewhat",
+          },
+          Object {
+            "label": "Not only do we employ these principles, but our research informs us how our users expect a service like ours to work (mental models), and also what their decision-making criteria are for choosing and using our service (choice architecture).",
+            "title": "Yes",
+          },
+        ],
+        "id": 2,
+        "question": "Do you learn your users 'mental models' before you start designing?",
+        "step": 2,
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "label": "We either don't have a defined vision, or if we do it is generic and mostly written using superlatives.",
+            "title": "No",
+          },
+          Object {
+            "label": "The vision is quite clear, and is bought to life through something illustrative like a storyboard.",
+            "title": "Somewhat",
+          },
+          Object {
+            "label": "The vision is clear, memorable and grounded on users specific unmet needs. It is bought to life through something tangible like a prototype.",
+            "title": "Yes",
+          },
+        ],
+        "id": 3,
+        "question": "Is the product vision clear?",
+        "step": 3,
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "label": "We're too focused on business-as-usual. Any concepting has to happen in a limited window at the start of a new project.",
+            "title": "No",
+          },
+          Object {
+            "label": "Our team can create simple prototypes and conduct light user-testing if we raise the business case for this.",
+            "title": "Somewhat",
+          },
+          Object {
+            "label": "We can create high definition prototypes quickly and simply. We can test and iterate these, and can pivot to different product concepts quickly, as needed.",
+            "title": "Yes",
+          },
+        ],
+        "id": 4,
+        "question": "Can you create and test new product concepts easily?",
+        "step": 4,
+      },
+      Object {
+        "answers": Array [
+          Object {
+            "label": "We design journeys in an ad-hoc way. We struggle to achieve consistency across our digital journeys.",
+            "title": "No",
+          },
+          Object {
+            "label": "Our UI design team use a basic component library.",
+            "title": "Somewhat",
+          },
+          Object {
+            "label": "We have a design system which is a full kit for designing digital experiences: with user-tested patterns, principles, as well as coded components. It is maintained as a product in its own right.",
+            "title": "Yes",
+          },
+        ],
+        "id": 5,
+        "question": "Does your design team utilise a design-system?",
+        "step": 5,
+      },
+    ],
   },
   "user": Object {
     "isAuthenticated": false,
