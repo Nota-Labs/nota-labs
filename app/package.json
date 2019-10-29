@@ -1,21 +1,16 @@
 {
-  "name": "react-redux-saga-boilerplate",
-  "description": "Boilerplate with React and Redux with Redux Saga",
+  "name": "nota-labs",
+  "description": "People-shaped digital products",
   "version": "2019.10.0",
-  "author": "Gil Barbara <gilbarbara@gmail.com>",
+  "author": "Nota <helo@notalabs.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gilbarbara/react-redux-saga-boilerplate"
+    "url": "https://github.com/Nota-Labs/nota-labs"
   },
-  "bugs": "https://github.com/gilbarbara/react-redux-saga-boilerplate/issues",
-  "license": "MIT",
+  "bugs": "https://github.com/Nota-Labs/nota-labs/issues",
+  "license": "UNLICENSED",
   "keywords": [
-    "React",
-    "React-Router",
-    "Redux",
-    "Redux-Saga",
-    "Webpack",
-    "ES6"
+    "Nota Labs"
   ],
   "dependencies": {
     "bootstrap": "^4.3.1",

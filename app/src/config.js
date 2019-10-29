@@ -5,7 +5,7 @@
 
 const config = {
   name: 'User Research  •  Product Strategy  •  Rapid Prototyping  •  Digital Design',
-  description: 'Boilerplate with React and Redux with Redux Saga',
+  description: 'People-shaped digital products',
 };
 
 export default config;

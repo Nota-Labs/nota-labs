@@ -17,21 +17,7 @@ import Vodafone_logo from '../components/resources/Vodafone_logo.png'
 import profile_ben_simmonds from '../components/resources/profile_ben_simmonds.png'
 import profile_james_odwyer from '../components/resources/profile_james_odwyer.png'
 
-const StyledContainer = styled(Container)`
-  align-items: center;
-  text-align: center;
-
-  h1,
-  a {
-    color: #fff;
-    line-height: 1;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-`;
-
+const StyledContainer = styled(Container)``;
 
 const Navigation = () => (
     <nav className="navbar navbar-expand-lg fixed-top nav_colour">

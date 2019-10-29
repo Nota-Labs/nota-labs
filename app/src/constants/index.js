@@ -10,7 +10,6 @@ import { keyMirror } from 'modules/helpers';
  * @memberof Constants
  */
 export const ActionTypes = keyMirror({
-  SWITCH_MENU: undefined,
   EXCEPTION: undefined,
   USER_LOGIN: undefined,
   USER_LOGIN_SUCCESS: undefined,
@@ -18,11 +17,6 @@ export const ActionTypes = keyMirror({
   USER_LOGOUT: undefined,
   USER_LOGOUT_SUCCESS: undefined,
   USER_LOGOUT_FAILURE: undefined,
-  GITHUB_GET_REPOS: undefined,
-  GITHUB_GET_REPOS_SUCCESS: undefined,
-  GITHUB_GET_REPOS_FAILURE: undefined,
-  SHOW_ALERT: undefined,
-  HIDE_ALERT: undefined,
   QUIZ_ADD_ANSWER: undefined,
   QUIZ_REMOVE_ANSWER: undefined,
   QUIZ_REMOVE_LATEST_ANSWER: undefined,

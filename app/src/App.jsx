@@ -19,9 +19,7 @@ import NotFound from 'routes/NotFound';
 import Quiz from 'routes/Quiz';
 
 import Header from 'components/Header';
-import SystemAlerts from 'components/SystemAlerts';
 
-import Footer from 'components/Footer';
 import GlobalStyles from 'components/GlobalStyles';
 import RoutePublic from 'components/RoutePublic';
 // import RoutePrivate from 'components/RoutePrivate';
@@ -101,8 +99,6 @@ export class App extends React.Component {
                 <Route component={NotFound} />
               </Switch>
             </Main>
-            {/* <Footer /> */}
-            <SystemAlerts />
             <GlobalStyles />
           </AppWrapper>
         </ThemeProvider>
