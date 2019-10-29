@@ -2,314 +2,131 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <title><%= htmlWebpackPlugin.options.title || 'Webpack App' %></title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="We're a team of user-researchers and product designers. We focus on one thing: helping companies design digital products around the needs of their users.">
+    <meta name="author" content="NOTA Digital Ltd">
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <meta property="og:title" content="React-Redux-Saga Boilerplate" />
-    <meta property="og:url" content="https://redux-saga.react-boilerplate.com/" />
-    <meta
-      property="og:description"
-      content="Provides: react ^16.x, react-router ^4.x, redux ^3.x, redux-saga ^0.16"
-    />
-    <meta
-      property="og:image"
-      content="https://redux-saga.react-boilerplate.com/media/og-image-v1.png"
-    />
-    <meta property="og:type" content="website" />
     <meta name="theme-color" content="#000000" />
-    <meta name="apple-mobile-web-app-title" content="React-Redux-Saga" />
+    <meta name="apple-mobile-web-app-title" content="NOTA Digital Ltd" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#333333" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/media/meta-icons/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/media/images-icons/favicon.ico" />
     <link
-      rel="icon"
+      rel="icon"§
       type="image/png"
-      href="%PUBLIC_URL%/media/meta-icons/favicon-16x16.png"
+      href="%PUBLIC_URL%/media/meta-icons/favicon.ico"
       sizes="16x16"
     />
     <link
       rel="icon"
       type="image/png"
-      href="%PUBLIC_URL%/media/meta-icons/favicon-32x32.png"
+      href="%PUBLIC_URL%/media/meta-icons/favicon.ico"
       sizes="32x32"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="%PUBLIC_URL%/media/meta-icons/apple-touch-icon.png"
+      href="%PUBLIC_URL%/media/meta-icons/favicon.ico"
     />
     <link
       rel="mask-icon"
-      href="%PUBLIC_URL%/media/meta-icons/safari-pinned-tab.svg"
+      href="%PUBLIC_URL%/media/meta-icons/favicon.ico"
       color="#5bbad5"
     />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles -->
+    <link href="%PUBLIC_URL%/media/css/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/428503cb89.js"></script>
+    <!-- CDN javascript -->
+
   </head>
   <body>
+  
+  <!--
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 fixed-top nav_colour">
+        <h5 class="my-0 mr-md-auto font-weight-normal"><a href="#top"><img src="images/logo_nota_labs.svg"></a></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark scroll" href="#about">About</a>
+          <a class="p-2 text-dark scroll" href="#how">How</a>
+          <a class="p-2 text-dark scroll" href="#work">Work</a>
+          <a class="p-2 text-dark scroll" href="#who">Who</a>
+        </nav>
+        <a href="mailto:hello@notalabs.co.uk"><button type="button" class="btn btn-primary btn-lg btn-block">Get in touch</button></a>
+      </div>
+  -->
+  
+  
+  
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+          $(".example").on("click", function(){
+            $(".expand").toggleClass("reverse");
+        })
+        </script>
+  
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149447724-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', 'UA-149447724-1');
+      </script>
+  
+      <!-- Hotjar Tracking Code for https://www.notalabs.co.uk -->
+      <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1526971,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      </script>
+  
+      <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+          
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+      </script>
+
     <div id="root" style="min-height: 100vh;">
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-          <filter id="gooey">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-              result="goo"
-            ></feColorMatrix>
-            <feBlend in="SourceGraphic" in2="goo"></feBlend>
-          </filter>
-        </defs>
-      </svg>
-      <div class="blob blob-0"></div>
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-      <div class="blob blob-4"></div>
-      <div class="blob blob-5"></div>
-      <style type="text/css">
-        html,
-        body {
-          font-size: 16px;
-          height: 100%;
-          width: 100%;
-        }
-
-        body {
-          background: linear-gradient(to bottom, #00b4d5, #00191e);
-        }
-
-        .blob {
-          background: rgba(255, 255, 255, 0.4);
-          border-radius: 50%;
-          height: 2rem;
-          left: calc(50% - 1rem);
-          position: absolute;
-          top: calc(50% - 1rem);
-          width: 2rem;
-        }
-
-        .blob-2 {
-          -webkit-animation: animate-to-2 1.5s infinite;
-          animation: animate-to-2 1.5s infinite;
-        }
-
-        .blob-3 {
-          -webkit-animation: animate-to-3 1.5s infinite;
-          animation: animate-to-3 1.5s infinite;
-        }
-
-        .blob-1 {
-          -webkit-animation: animate-to-1 1.5s infinite;
-          animation: animate-to-1 1.5s infinite;
-        }
-
-        .blob-4 {
-          -webkit-animation: animate-to-4 1.5s infinite;
-          animation: animate-to-4 1.5s infinite;
-        }
-
-        .blob-0 {
-          -webkit-animation: animate-to-0 1.5s infinite;
-          animation: animate-to-0 1.5s infinite;
-        }
-
-        .blob-5 {
-          -webkit-animation: animate-to-5 1.5s infinite;
-          animation: animate-to-5 1.5s infinite;
-        }
-
-        @-webkit-keyframes animate-to-2 {
-          25%,
-          75% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-2 {
-          25%,
-          75% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @-webkit-keyframes animate-to-3 {
-          25%,
-          75% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-3 {
-          25%,
-          75% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @-webkit-keyframes animate-to-1 {
-          25% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          50%,
-          75% {
-            -webkit-transform: translateX(-4.5rem) scale(0.6);
-            transform: translateX(-4.5rem) scale(0.6);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-1 {
-          25% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          50%,
-          75% {
-            -webkit-transform: translateX(-4.5rem) scale(0.6);
-            transform: translateX(-4.5rem) scale(0.6);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @-webkit-keyframes animate-to-4 {
-          25% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          50%,
-          75% {
-            -webkit-transform: translateX(4.5rem) scale(0.6);
-            transform: translateX(4.5rem) scale(0.6);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-4 {
-          25% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          50%,
-          75% {
-            -webkit-transform: translateX(4.5rem) scale(0.6);
-            transform: translateX(4.5rem) scale(0.6);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @-webkit-keyframes animate-to-0 {
-          25% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          50% {
-            -webkit-transform: translateX(-4.5rem) scale(0.6);
-            transform: translateX(-4.5rem) scale(0.6);
-          }
-          75% {
-            -webkit-transform: translateX(-7.5rem) scale(0.5);
-            transform: translateX(-7.5rem) scale(0.5);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-0 {
-          25% {
-            -webkit-transform: translateX(-1.5rem) scale(0.75);
-            transform: translateX(-1.5rem) scale(0.75);
-          }
-          50% {
-            -webkit-transform: translateX(-4.5rem) scale(0.6);
-            transform: translateX(-4.5rem) scale(0.6);
-          }
-          75% {
-            -webkit-transform: translateX(-7.5rem) scale(0.5);
-            transform: translateX(-7.5rem) scale(0.5);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @-webkit-keyframes animate-to-5 {
-          25% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          50% {
-            -webkit-transform: translateX(4.5rem) scale(0.6);
-            transform: translateX(4.5rem) scale(0.6);
-          }
-          75% {
-            -webkit-transform: translateX(7.5rem) scale(0.5);
-            transform: translateX(7.5rem) scale(0.5);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        @keyframes animate-to-5 {
-          25% {
-            -webkit-transform: translateX(1.5rem) scale(0.75);
-            transform: translateX(1.5rem) scale(0.75);
-          }
-          50% {
-            -webkit-transform: translateX(4.5rem) scale(0.6);
-            transform: translateX(4.5rem) scale(0.6);
-          }
-          75% {
-            -webkit-transform: translateX(7.5rem) scale(0.5);
-            transform: translateX(7.5rem) scale(0.5);
-          }
-          95% {
-            -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
-          }
-        }
-      </style>
     </div>
+
     <% if (htmlWebpackPlugin.options.window) { %>
     <script>
       <% for (var varName in htmlWebpackPlugin.options.window) { %>

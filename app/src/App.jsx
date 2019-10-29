@@ -14,8 +14,7 @@ import { utils } from 'styled-minimal';
 import config from 'config';
 import { showAlert } from 'actions';
 
-import Home from 'routes/Home';
-import Private from 'routes/Private';
+import NotaHome from 'routes/NotaHome';
 import NotFound from 'routes/NotFound';
 import Quiz from 'routes/Quiz';
 
@@ -25,7 +24,7 @@ import SystemAlerts from 'components/SystemAlerts';
 import Footer from 'components/Footer';
 import GlobalStyles from 'components/GlobalStyles';
 import RoutePublic from 'components/RoutePublic';
-import RoutePrivate from 'components/RoutePrivate';
+// import RoutePrivate from 'components/RoutePrivate';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -86,22 +85,23 @@ export class App extends React.Component {
                   isAuthenticated={user.isAuthenticated}
                   path="/"
                   exact
-                  component={Home}
+                  component={NotaHome}
                 />
-                <RoutePrivate
+                <RoutePublic
+                  isAuthenticated={user.isAuthenticated}
+                  path="/quiz"
+                  exact
+                  component={Quiz}
+                />
+                {/* <RoutePrivate
                   isAuthenticated={user.isAuthenticated}
                   path="/private"
                   component={Private}
-                />
-                <RoutePrivate
-                  isAuthenticated={user.isAuthenticated}
-                  path="/quiz"
-                  component={Quiz}
-                />
+                /> */}
                 <Route component={NotFound} />
               </Switch>
             </Main>
-            <Footer />
+            {/* <Footer /> */}
             <SystemAlerts />
             <GlobalStyles />
           </AppWrapper>
