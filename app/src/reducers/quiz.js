@@ -3,7 +3,7 @@ import { handleActions } from 'modules/helpers';
 import { ActionTypes } from 'constants/index';
 
 export const quizState = {
-  currentStep: 0,
+  currentStep: -1,
   answers: [],
   questions: [
     {
@@ -115,6 +115,9 @@ export default {
       },
       [ActionTypes.QUIZ_ADD_ANSWER]: (state, { payload }) => {
         state.answers.push(payload.answer);
+      },
+      [ActionTypes.QUIZ_START]: state => {
+        state.currentStep = 0;
       },
     },
     quizState,

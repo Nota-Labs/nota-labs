@@ -20,6 +20,7 @@ export const ActionTypes = keyMirror({
   QUIZ_ADD_ANSWER: undefined,
   QUIZ_REMOVE_ANSWER: undefined,
   QUIZ_REMOVE_LATEST_ANSWER: undefined,
+  QUIZ_START: undefined,
 });
 
 /**
