@@ -118,6 +118,7 @@ export default {
       },
       [ActionTypes.QUIZ_START]: state => {
         state.currentStep = 0;
+        state.answers = [];
       },
     },
     quizState,
