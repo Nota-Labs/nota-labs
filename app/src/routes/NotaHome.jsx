@@ -18,6 +18,8 @@ import profile_ben_simmonds from '../components/resources/profile_ben_simmonds.p
 import profile_james_odwyer from '../components/resources/profile_james_odwyer.png'
 import FullListOfServices from '../components/FullListOfServices';
 
+import QuizIntroduction from '../components/QuizIntroduction'
+
 const StyledContainer = styled(Container)``;
 
 const Navigation = () => (
@@ -263,6 +265,7 @@ const NotaHome = () => (
         <Work />
         <AboutUs />
         <GetInTouch />
+        <QuizIntroduction />
         <Footer />
     </div>
 );

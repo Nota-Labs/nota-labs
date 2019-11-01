@@ -3,7 +3,7 @@ import { handleActions } from 'modules/helpers';
 import { ActionTypes } from 'constants/index';
 
 export const quizState = {
-  currentStep: -1,
+  currentStep: 0,
   answers: [],
   questions: [
     {
