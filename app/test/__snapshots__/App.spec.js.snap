@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should render properly for anonymous users 1`] = `
+exports[`App should render properly 1`] = `
 <Router history="{{...}}">
   <ThemeProvider theme="{{...}}">
     <AppWrapper logged="{false}">
       <Helmet defer="{false}"
               htmlattributes="{{...}}"
               encodespecialcharacters="{true}"
-              defaulttitle="React Redux Saga Boilerplate"
-              titletemplate="%s | React Redux Saga Boilerplate"
+              defaulttitle="User Research  •  Product Strategy  •  Rapid Prototyping  •  Digital Design"
+              titletemplate="%s | User Research  •  Product Strategy  •  Rapid Prototyping  •  Digital Design"
               titleattributes="{{...}}"
       >
       </Helmet>
@@ -17,34 +17,25 @@ exports[`App should render properly for anonymous users 1`] = `
           <RoutePublic isauthenticated="{false}"
                        path="/"
                        exact="{true}"
-                       component="{{...}}"
+                       component="{[Function:"
+                       notahome]}
                        to="/private"
           >
           </RoutePublic>
-          <RoutePrivate isauthenticated="{false}"
-                        path="/private"
-                        component="{[Function:"
-                        private]}
-                        to="/"
+          <RoutePublic isauthenticated="{false}"
+                       path="/quiz"
+                       exact="{true}"
+                       component="{[Function:"
+                       quizcontainer]}
+                       to="/private"
           >
-          </RoutePrivate>
-          <RoutePrivate isauthenticated="{false}"
-                        path="/quiz"
-                        component="{[Function:"
-                        quiz]}
-                        to="/"
-          >
-          </RoutePrivate>
+          </RoutePublic>
           <Route component="{[Function:"
                  notfound]}
           >
           </Route>
         </Switch>
       </Main>
-      <Footer>
-      </Footer>
-      <Connect(SystemAlerts)>
-      </Connect(SystemAlerts)>
       <_default>
       </_default>
     </AppWrapper>

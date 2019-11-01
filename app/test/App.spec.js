@@ -21,18 +21,18 @@ function setup(ownProps = props) {
 describe('App', () => {
   const wrapper = setup();
 
-  it('should render properly for anonymous users', () => {
+  it('should render properly', () => {
     expect(wrapper.debug()).toMatchSnapshot();
   });
 
-  it('should render properly for logged users', () => {
-    wrapper.setProps({
-      ...wrapper.props(),
-      user: {
-        isAuthenticated: true,
-      },
-    });
+  // it('should render properly for logged users', () => {
+  //   wrapper.setProps({
+  //     ...wrapper.props(),
+  //     user: {
+  //       isAuthenticated: true,
+  //     },
+  //   });
 
-    expect(wrapper.find('Header')).toExist();
-  });
+  //   expect(wrapper.find('Header')).toExist();
+  // });
 });
