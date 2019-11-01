@@ -31,7 +31,7 @@ const QuizForm = props => {
   const { handleSubmit, submitting, currentQuestion, currentStep } = props;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-testid="QuizForm">
       <h2>{currentQuestion.question}</h2>
 
       {currentQuestion.answers.map((answer, index) => (

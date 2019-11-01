@@ -35,7 +35,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   handleSubmit: values => {
-    // ownProps.history.push('/confirm');
     dispatch(addAnswer(values.answer));
   },
 });
