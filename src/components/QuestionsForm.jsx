@@ -9,6 +9,7 @@ const RadioInputCustom = styled.div`
   padding-left: 2em;
   margin-bottom: 1em;
   label {
+    width: 100%;
     &:hover {
       cursor: pointer;
       background: #f5f5f5;
@@ -48,12 +49,14 @@ const RadioInputCustom = styled.div`
       background-color: #53dbb5;
    }
   }
+  input[type="radio"] {
+    opacity: 0;
+  }
 `;
 
 const RadioField = ({ input, meta, label, step, id, ...props }) => (
   <RadioInputCustom>
     <FormCheck
-      inline
       id={`input${id}`}
       name={`step${step}`}
       label={label}
