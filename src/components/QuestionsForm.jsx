@@ -5,9 +5,29 @@ import FormCheck from 'react-bootstrap/FormCheck';
 // import FormControl from 'react-bootstrap/FormControl';
 import styled from 'styled-components';
 
+const ButtonCustom = styled.div`
+  text-align: right;
+  button {
+    background: black;
+    font-size: 1.5em;
+    padding: 0.4em 1.4em;
+    border-radius: 0.4em;
+    border-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #53dbb5!important;
+      border-color: transparent!important;
+      box-shadow: 0 0 1em 0.2rem rgba(0,0,0,.10)!important;
+    }
+  }
+`;
+
 const RadioInputCustom = styled.div`
-  padding-left: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  > div {
+    padding-left: 0;
+  }
   label {
     width: 100%;
     &:hover {
@@ -17,34 +37,33 @@ const RadioInputCustom = styled.div`
     &::before{
       content: '';
       display: block;
-      width: 1.4em;
-      height: 1.4em;
+      width: 2em;
+      height: 2em;
       position: absolute;
       top: 50%;
-      margin-top: -0.7em;
-      margin-left: -3.15em;
-      border-radius: 1.4em;
+      margin-top: -1em;
+      margin-left: -4em;
+      border-radius: 2em;
       background-color: transparent;
       border: 2px solid #53dbb5;
     }
     background: white;
     border-radius: 5px;
-    border: 1px solid transparent;
-    margin-left: -3em;
-    padding: 1.5em 2em 1.5em 5em;
+    border: 1px solid #ddd;
+    padding: 2em 3em 2em 6em;
       p {
         font-weight: 300;
         font-size: 1em;
         margin-bottom: 0;
       }
       strong {
-        font-weight: 400;
+        font-weight: 600;
         font-size: 1.5em;
       }
     }
   }
   input[type="radio"]:checked+label {
-    border-color: #ccc;
+    border-color: #ddd;
     &::before{
       background-color: #53dbb5;
    }
@@ -111,10 +130,11 @@ const QuizForm = props => {
         step={1}
         props={{ value: 'Value test' }}
       /> */}
-
-      <Button type="submit" disabled={submitting}>
-        Next
-      </Button>
+      <ButtonCustom>
+        <Button type="submit" disabled={submitting}>
+          Next
+        </Button>
+      </ButtonCustom>
     </form>
   );
 };
