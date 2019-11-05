@@ -172,6 +172,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   startQuiz: values => {
+    window.scrollTo(0, 0);
     dispatch(start());
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, reset, Field } from 'redux-form';
 import Button from 'react-bootstrap/Button';
 import FormCheck from 'react-bootstrap/FormCheck';
 // import FormControl from 'react-bootstrap/FormControl';
@@ -16,9 +16,9 @@ const ButtonCustom = styled.div`
     &:hover,
     &:active,
     &:focus {
-      background-color: #53dbb5!important;
-      border-color: transparent!important;
-      box-shadow: 0 0 1em 0.2rem rgba(0,0,0,.10)!important;
+      background-color: #53dbb5 !important;
+      border-color: transparent !important;
+      box-shadow: 0 0 1em 0.2rem rgba(0, 0, 0, 0.1) !important;
     }
   }
 `;
@@ -73,18 +73,21 @@ const RadioInputCustom = styled.div`
   }
 `;
 
-const RadioField = ({ input, meta, label, step, id, ...props }) => (
-  <RadioInputCustom>
-    <FormCheck
-      id={`input${id}`}
-      name={`step${step}`}
-      label={label}
-      type="radio"
-      {...input}
-      {...props}
-    />
-  </RadioInputCustom>
-);
+const RadioField = ({ input, meta, label, step, id, ...props }) => {
+  return (
+    <RadioInputCustom>
+      <FormCheck
+        id={`input${id}`}
+        name={`step${step}`}
+        type="radio"
+        label={label}
+        {...input}
+        {...props}
+        checked={input.value && input.value == props.value}
+      />
+    </RadioInputCustom>
+  );
+};
 
 // const FieldInput = ({ input, meta, id, type, placeholder, label, ...props }) => (
 //   <FormControl
@@ -97,49 +100,60 @@ const RadioField = ({ input, meta, label, step, id, ...props }) => (
 //   />
 // );
 
-const QuizForm = props => {
-  const { handleSubmit, submitting, currentQuestion, currentStep } = props;
+class QuizForm extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
-  return (
-    <form onSubmit={handleSubmit} data-testid="QuizForm">
-      <h2>{currentQuestion.question}</h2>
+  render() {
+    const { handleSubmit, submitting, currentQuestion, currentStep } = this.props;
+    return (
+      <form onSubmit={handleSubmit} data-testid="QuizForm">
+        <h2>{currentQuestion.question}</h2>
 
-      {currentQuestion.answers.map((answer, index) => (
-        <Field
-          id={index}
-          name="answer"
-          component={RadioField}
-          step={currentStep}
-          props={{ value: index }}
-          key={`option_${index}`}
-          label={
-            <span>
-              <strong>{answer.title}</strong>
-              <p>{answer.label}</p>
-            </span>
-          }
-        />
-      ))}
+        {currentQuestion.answers.map((answer, index) => (
+          <Field
+            id={index}
+            name="answer"
+            component={RadioField}
+            step={currentStep}
+            props={{ value: index }}
+            key={`option_${index}`}
+            label={
+              <span>
+                <strong>{answer.title}</strong>
+                <p>{answer.label}</p>
+              </span>
+            }
+          />
+        ))}
 
-      {/* <Field
-        id={4}
-        name={`text1`}
-        component={FieldInput}
-        type="text"
-        placeholder="Placeholder"
-        step={1}
-        props={{ value: 'Value test' }}
-      /> */}
-      <ButtonCustom>
-        <Button type="submit" disabled={submitting}>
-          Next
-        </Button>
-      </ButtonCustom>
-    </form>
-  );
+        {/* <Field
+            id={4}
+            name={`text1`}
+            component={FieldInput}
+            type="text"
+            placeholder="Placeholder"
+            step={1}
+            props={{ value: 'Value test' }}
+          /> */}
+        <ButtonCustom>
+          <Button type="submit" disabled={submitting}>
+            Next
+          </Button>
+        </ButtonCustom>
+      </form>
+    );
+  }
+}
+
+const afterSubmit = (result, dispatch) => {
+  window.scrollTo(0, 0);
+  dispatch(reset('Quiz'));
 };
 
 export default reduxForm({
   form: 'Quiz', // a unique identifier for this form
+  onSubmitSuccess: afterSubmit,
   // validate
 })(QuizForm);
