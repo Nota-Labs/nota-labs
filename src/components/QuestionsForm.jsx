@@ -15,7 +15,8 @@ const ButtonCustom = styled.div`
     border-color: transparent;
     &:hover,
     &:active,
-    &:focus {
+    &:focus,
+    &:disabled {
       background-color: #53dbb5 !important;
       border-color: transparent !important;
       box-shadow: 0 0 1em 0.2rem rgba(0, 0, 0, 0.1) !important;
@@ -66,7 +67,10 @@ const RadioInputCustom = styled.div`
     border-color: #ddd;
     &::before{
       background-color: #53dbb5;
-   }
+    }
+  }
+  input[type="radio"]:focus+label {
+    border-color: #53dbb5;
   }
   input[type="radio"] {
     opacity: 0;
@@ -106,7 +110,7 @@ class QuizForm extends React.Component {
   }
 
   render() {
-    const { handleSubmit, submitting, currentQuestion, currentStep } = this.props;
+    const { handleSubmit, submitting, pristine, currentQuestion, currentStep } = this.props;
     return (
       <form onSubmit={handleSubmit} data-testid="QuizForm">
         <h2>{currentQuestion.question}</h2>
@@ -138,7 +142,7 @@ class QuizForm extends React.Component {
             props={{ value: 'Value test' }}
           /> */}
         <ButtonCustom>
-          <Button type="submit" disabled={submitting}>
+          <Button type="submit" disabled={submitting || pristine}>
             Next
           </Button>
         </ButtonCustom>
@@ -152,8 +156,16 @@ const afterSubmit = (result, dispatch) => {
   dispatch(reset('Quiz'));
 };
 
+const validate = values => {
+  const errors = {};
+  if (!values.answer) {
+    errors.answer = 'Required';
+  }
+  return errors;
+};
+
 export default reduxForm({
   form: 'Quiz', // a unique identifier for this form
   onSubmitSuccess: afterSubmit,
-  // validate
+  validate,
 })(QuizForm);
