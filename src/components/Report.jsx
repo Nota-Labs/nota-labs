@@ -157,9 +157,6 @@ const Report = ({ startQuiz, answers }) => {
         <a href="mailto:hello@notalabs.co.uk">hello@notalabs.co.uk</a>{' '}
         <a href="tel:08001448810">0800 144 88 10</a>
       </p>
-      <hr />
-      <h3>Full list of services:</h3>
-      <FullListOfServices />
     </div>
   );
 };
