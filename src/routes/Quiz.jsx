@@ -4,7 +4,7 @@ import Questions from 'components/Questions';
 
 const QuizContainer = () => (
   <div className="container">
-    <div className="row section">
+    <div className="row">
       <div className="col-md-8 offset-md-2">
         <Questions />
       </div>
