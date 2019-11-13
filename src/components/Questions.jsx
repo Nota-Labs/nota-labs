@@ -6,7 +6,7 @@ import QuestionsForm from './QuestionsForm';
 import Report from './Report';
 
 const QuestionsContainer = styled.div`
-  padding: 80px;
+  padding: 0 80px 80px;
 `;
 
 const Questions = ({ handleSubmit, currentQuestion, currentStep, hasFinished }) => (
