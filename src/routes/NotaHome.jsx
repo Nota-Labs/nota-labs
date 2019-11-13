@@ -201,13 +201,13 @@ const AboutUs = () => (
         </div>
     </div>
 )
-
+/*
 const GetInTouch = () => (
     <div className="container-fluid light_grey" id="bottom">
         <div className="container">
             <div className="row section">
                 <div className="col-md-8 offset-md-2">
-                    {/* <!-- Content here --> */}
+                    {/* <!-- Content here --> }
                     <h2 className="section_header yellow-block"><a href="mailto:hello@notalabs.co.uk" style={{color: 'black'}}>Get in touch if you're looking to:</a></h2>
                     <span style={{fontWeight: '400'}}>
                         <ul>
@@ -227,6 +227,8 @@ const GetInTouch = () => (
         </div>
     </div>
 )
+*/
+
 
 const Footer = () => (
     <div className="container-fluid section-black">
@@ -264,7 +266,6 @@ const NotaHome = () => (
         <How />
         <Work />
         <AboutUs />
-        <GetInTouch />
         <QuizIntroduction />
         <Footer />
     </div>

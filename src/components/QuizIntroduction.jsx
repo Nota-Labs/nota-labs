@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const QuizIntroduction = () => (
-  <div className="container-fluid" id="bottom">
+  <div className="container-fluid light_grey" id="bottom">
     <div className="container">
       <div className="row section">
         <div className="col-md-8 offset-md-2">

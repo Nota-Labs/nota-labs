@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import LogoSrc from './resources/NOTA_logo_white.svg';
 
 export const LogoContainer = styled.div`
-  padding: 30px;
+  padding: 35px 0px 0px 36px;
 `;
 
 const Logo = () => (

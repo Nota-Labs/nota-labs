@@ -150,7 +150,7 @@ const Report = ({ startQuiz, answers }) => {
     <div>
       <h2>Here's your report</h2>
       {answeredYesCount >= 4 ? <SuccessReport /> : <TailoredReport answers={answers} />}
-      <button onClick={() => startQuiz()}>Restart</button>
+      <button type="button" className="btn btn-primary btn-lg btn-block" onClick={() => startQuiz()}>Restart</button>
       <hr />
       <h3>Discuss this with us now?</h3>
       <p>
