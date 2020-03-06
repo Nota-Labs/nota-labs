@@ -17,8 +17,8 @@ const FooterBar = () => (
               <div className="col-md-2">
                   <h3>Follow us</h3>
                   <p>
-                      <a href="https://www.instagram.com/nota_labs/" target="_window" style={{background: 'none'}}><i className="fab fa-instagram icon-size-white" style={{marginRight: '20px'}}></i></a>
-                      <a href="https://twitter.com/Notalabs1" target="_window" style={{background: 'none'}}><i className="fab fa-twitter-square icon-size-white"></i></a>
+                    <a href="https://www.instagram.com/nota_labs/" target="_window" style={{background: 'none'}}><i className="fab fa-instagram icon-size-white" style={{marginRight: '20px'}}></i></a>
+                    <a href="https://twitter.com/Notalabs1" target="_window" style={{background: 'none'}}><i className="fab fa-twitter-square icon-size-white"></i></a>
                   </p>
               </div>
               <div className="col-md-3">
