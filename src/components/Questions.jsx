@@ -12,7 +12,7 @@ const QuestionsContainer = styled.div`
 
 class Questions extends React.Component {
   static propTypes = {
-    currentQuestion: PropTypes.number,
+    currentQuestion: PropTypes.object,
     currentStep: PropTypes.number,
     handleSubmit: PropTypes.func.isRequired,
     hasFinished: PropTypes.bool,
