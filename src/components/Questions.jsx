@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { addAnswer } from '../actions';
+import { addAnswer, start } from '../actions';
 import QuestionsForm from './QuestionsForm';
 import Report from './Report';
 
@@ -9,7 +10,26 @@ const QuestionsContainer = styled.div`
   padding: 0 80px 80px;
 `;
 
-const Questions = ({ handleSubmit, currentQuestion, currentStep, hasFinished }) => (
+class Questions extends React.Component {
+  static propTypes = {
+    currentQuestion: PropTypes.number,
+    currentStep: PropTypes.number,
+    handleSubmit: PropTypes.func.isRequired,
+    hasFinished: PropTypes.bool,
+    startQuiz: PropTypes.func.isRequired,
+  };
+
+  componentDidMount() {
+    const { startQuiz } = this.props;
+    startQuiz();
+  }
+
+  render() {
+    return <QuestionsWrapper {...this.props} />;
+  }
+}
+
+const QuestionsWrapper = ({ handleSubmit, currentQuestion, currentStep, hasFinished }) => (
   <QuestionsContainer>
     {hasFinished ? (
       <Report />
@@ -32,6 +52,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   handleSubmit: values => {
     dispatch(addAnswer(values.answer));
+  },
+  startQuiz: () => {
+    dispatch(start());
   },
 });
 
