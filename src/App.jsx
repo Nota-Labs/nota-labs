@@ -62,6 +62,7 @@ export class App extends React.Component {
   }
 
   render() {
+    // Dispatch used for authenticated header
     const { dispatch, user } = this.props;
 
     return (
