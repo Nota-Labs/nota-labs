@@ -1,13 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { start } from '../actions';
+import styled from 'styled-components';
 import FullListOfServices from './FullListOfServices';
+
+const Description = styled.div`
+  background-color: #fffeec;
+  border: 2px solid #f8e71c;
+  padding: 20px 30px 0px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+`;
+
+const Stronger = styled.span`
+  font-weight: 800;
+`;
 
 const SuccessReport = () => (
   <div>
-    <h3>Good job!</h3>
-    <p>It sounds like your product and process are pretty user-centric!</p>
-    <p>There may be areas where we can help you fine-tune what you're currently doing.</p>
+    <Description>
+      <h3>Good job!</h3>
+      <p>It sounds like your product and process are pretty user-centric!</p>
+      <p>There may be areas where we can help you fine-tune what you're currently doing.</p>
+    </Description>
     <h3>
       We tend to support clients in the following areas. It sounds like you're already in good shape
       with these, however If you'd like to talk further, please get in touch.
@@ -15,31 +30,31 @@ const SuccessReport = () => (
     <ul>
       <li>
         <p>
-          <strong>Experience mapping.</strong> We'll create a map of your users needs, highlighting
-          which are met and (crucially) unmet by the marketplace. We'll identify which needs are
-          'hygiene' and which are 'differentiators'. We'll help you use this as a more predictable
-          and systematic basis for product development. We'll take the best bits of Jobs-To-Be-Done
-          and Experience Mapping approaches.
+          <Stronger>Experience mapping.</Stronger> We'll create a map of your users needs,
+          highlighting which are met and (crucially) unmet by the marketplace. We'll identify which
+          needs are 'hygiene' and which are 'differentiators'. We'll help you use this as a more
+          predictable and systematic basis for product development. We'll take the best bits of
+          Jobs-To-Be-Done and Experience Mapping approaches.
         </p>
       </li>
       <li>
         <p>
-          <strong>Users mental models and decision-making.</strong> We'll help you learn how your
-          users expect a service like yours to work, and what their decision-making criteria is when
-          using and choosing services like yours. This allows you to base your product designs on
-          how users think and behave. More intuitive journeys, less costly usability issues.
+          <Stronger>Users mental models and decision-making.</Stronger> We'll help you learn how
+          your users expect a service like yours to work, and what their decision-making criteria is
+          when using and choosing services like yours. This allows you to base your product designs
+          on how users think and behave. More intuitive journeys, less costly usability issues.
         </p>
       </li>
       <li>
         <p>
-          <strong>Prototyping.</strong> You need to be able to prototype and test quickly and often.
-          We'll help you establish your workflow for this, or how to use us as an extension of your
-          team.
+          <Stronger>Prototyping.</Stronger> You need to be able to prototype and test quickly and
+          often. We'll help you establish your workflow for this, or how to use us as an extension
+          of your team.
         </p>
       </li>
       <li>
         <p>
-          <strong>Product vision.</strong> We'll help you set a more tangible vision. We'll
+          <Stronger>Product vision.</Stronger> We'll help you set a more tangible vision. We'll
           establish which unmet user needs the product solves, and find memorable ways of bringing
           this vision to life - such as a credible prototype that you can share with the team,
           stakeholders, investors.
@@ -47,8 +62,9 @@ const SuccessReport = () => (
       </li>
       <li>
         <p>
-          <strong>Design system.</strong> We'll help you on the path to establishing a mature design
-          system, as a central resource for building consistent, usable, on-brand digital journeys.
+          <Stronger>Design system.</Stronger> We'll help you on the path to establishing a mature
+          design system, as a central resource for building consistent, usable, on-brand digital
+          journeys.
         </p>
       </li>
     </ul>
@@ -81,13 +97,13 @@ const TailoredReport = ({ answers }) => {
 
   return (
     <div>
-      {description}
+      <Description>{description}</Description>
       <h3>Based on your answers, we feel we can help you with:</h3>
       <ul>
         {answers[0] !== '2' && (
           <li>
             <p>
-              <strong>Experience mapping.</strong> We'll create a map of your users needs,
+              <Stronger>Experience mapping.</Stronger> We'll create a map of your users needs,
               highlighting which are met and (crucially) unmet by the marketplace. We'll identify
               which needs are 'hygiene' and which are 'differentiators'. We'll help you use this as
               a more predictable and systematic basis for product development. We'll take the best
@@ -98,7 +114,7 @@ const TailoredReport = ({ answers }) => {
         {answers[1] !== '2' && (
           <li>
             <p>
-              <strong>Users mental models and decision-making.</strong> We'll help you learn how
+              <Stronger>Users mental models and decision-making.</Stronger> We'll help you learn how
               your users expect a service like yours to work, and what their decision-making
               criteria is when using and choosing services like yours. This allows you to base your
               product designs on how users think and behave. More intuitive journeys, less costly
@@ -109,8 +125,8 @@ const TailoredReport = ({ answers }) => {
         {answers[2] !== '2' && (
           <li>
             <p>
-              <strong>Prototyping.</strong> You need to be able to prototype and test quickly and
-              often. We'll help you establish your workflow for this, or how to use us as an
+              <Stronger>Prototyping.</Stronger> You need to be able to prototype and test quickly
+              and often. We'll help you establish your workflow for this, or how to use us as an
               extension of your team.
             </p>
           </li>
@@ -118,7 +134,7 @@ const TailoredReport = ({ answers }) => {
         {answers[3] !== '2' && (
           <li>
             <p>
-              <strong>Product vision.</strong> We'll help you set a more tangible vision. We'll
+              <Stronger>Product vision.</Stronger> We'll help you set a more tangible vision. We'll
               establish which unmet user needs the product solves, and find memorable ways of
               bringing this vision to life - such as a credible prototype that you can share with
               the team, stakeholders, investors.
@@ -128,9 +144,9 @@ const TailoredReport = ({ answers }) => {
         {answers[4] !== '2' && (
           <li>
             <p>
-              <strong>Design system.</strong> We'll help you on the path to establishing a mature
-              design system, as a central resource for building consistent, usable, on-brand digital
-              journeys.
+              <Stronger>Design system.</Stronger> We'll help you on the path to establishing a
+              mature design system, as a central resource for building consistent, usable, on-brand
+              digital journeys.
             </p>
           </li>
         )}

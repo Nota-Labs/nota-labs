@@ -5,6 +5,14 @@ import FormCheck from 'react-bootstrap/FormCheck';
 // import FormControl from 'react-bootstrap/FormControl';
 import styled from 'styled-components';
 
+const QuestionNumber = styled.span`
+  color: #000;
+  background: #f8e71c;
+  padding: 0px 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+`;
+
 const ButtonCustom = styled.div`
   text-align: right;
   button {
@@ -113,6 +121,7 @@ class QuizForm extends React.Component {
     const { handleSubmit, submitting, pristine, currentQuestion, currentStep } = this.props;
     return (
       <form onSubmit={handleSubmit} data-testid="QuizForm">
+        <QuestionNumber>Question {currentQuestion.step}</QuestionNumber>
         <h2>{currentQuestion.question}</h2>
 
         {currentQuestion.answers.map((answer, index) => (
